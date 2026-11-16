@@ -1,0 +1,18 @@
+{
+  "name": "mawzz-vps-extractor",
+  "version": "1.0.0",
+  "description": "VPS information extractor via SSH with read-only diagnostics",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "ssh2": "^1.16.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "dotenv": "^16.4.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "ipaddr.js": "^2.2.0"
+  }
+}
