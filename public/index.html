@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAWZZ VPS EXTRACTOR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>MAWZZ <span>VPS EXTRACTOR</span></h1>
+    <p class="subtitle">Secure VPS Information Dashboard</p>
+  </header>
+
+  <main>
+    <section class="card form-card">
+      <h2>Connect to VPS</h2>
+      <form id="connectForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="ip">IP Address</label>
+            <input type="text" id="ip" placeholder="203.0.113.10" required>
+          </div>
+          <div class="field">
+            <label for="port">SSH Port</label>
+            <input type="number" id="port" value="22" min="1" max="65535" required>
+          </div>
+          <div class="field">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="root" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••" required>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="submit" id="connectBtn" class="btn primary">CONNECT VPS</button>
+          <button type="button" id="disconnectBtn" class="btn danger" disabled>DISCONNECT</button>
+          <button type="button" id="clearBtn" class="btn secondary">CLEAR DATA</button>
+        </div>
+        <div id="statusMsg" class="status-msg"></div>
+      </form>
+    </section>
+
+    <section id="dashboard" class="dashboard hidden">
+      <div class="dash-grid">
+        <div class="card">
+          <h3>VPS Information</h3>
+          <div id="vpsInfo" class="info-grid"></div>
+        </div>
+        <div class="card">
+          <h3>CPU Monitoring</h3>
+          <div id="cpuInfo" class="metric-display"></div>
+        </div>
+        <div class="card">
+          <h3>RAM Monitoring</h3>
+          <div id="ramInfo" class="metric-display"></div>
+        </div>
+        <div class="card">
+          <h3>Storage Monitoring</h3>
+          <div id="diskInfo" class="metric-display"></div>
+        </div>
+        <div class="card">
+          <h3>Network Monitoring</h3>
+          <pre id="networkInfo" class="network-pre"></pre>
+        </div>
+        <div class="card">
+          <h3>Server Details</h3>
+          <div id="serverDetails" class="info-grid"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Connection History</h3>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+            </html>
